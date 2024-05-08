@@ -140,6 +140,7 @@ cv.destroyAllWindows()
 Finally, this releases the resources (webcam and video file) and closes all OpenCV windows.
 
 7.output
+[Screencast from 08-05-24 01:20:02 PM IST.webm](https://github.com/kondasweth/manasa/assets/169050846/6feb9aed-c1df-4ff4-8cb5-c91280695dbc)
 
 
 
