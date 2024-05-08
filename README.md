@@ -139,8 +139,8 @@ file.release()
 cv.destroyAllWindows()
 Finally, this releases the resources (webcam and video file) and closes all OpenCV windows.
 
-7.input&output
-input
+7.output
+/home/swetha-konda/Videos/Screencasts/Screencast from 08-05-24 01:20:02 PM IST.webm
 
 
 
