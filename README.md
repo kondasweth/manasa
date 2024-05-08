@@ -269,14 +269,23 @@ The output of running this code will be a series of lines printed to the console
 
 Output:
 Current Number 0Previous Number 0is 0
+
 Current Number 1Previous Number 0is 1
+
 Current Number 2Previous Number 1is 3
+
 Current Number 3Previous Number 2is 5
+
 Current Number 4Previous Number 3is 7
+
 Current Number 5Previous Number 4is 9
+
 Current Number 6Previous Number 5is 11
+
 Current Number 7Previous Number 6is 13
+
 Current Number 8Previous Number 7is 15
+
 Current Number 9Previous Number 8is 17
 
 
