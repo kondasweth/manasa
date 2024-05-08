@@ -48,9 +48,10 @@ Display Histogram:
 This code essentially reads an image, calculates and plots the histogram for each color channel (blue, green, and red), and displays the histograms using Matplotlib. It helps visualize the distribution of pixel intensities for each color channel in the image.
 7.output
 input                                        
-file:///home/swetha-konda/Downloads/parrot.jpeg 
-ouput
-file:///home/swetha-konda/Desktop/code1/Figure_1.png
+![parrot](https://github.com/kondasweth/manasa/assets/169050846/782d7016-64c3-4641-a6a5-c81aac383da7)
 
+ouput
+
+![Figure_1](https://github.com/kondasweth/manasa/assets/169050846/da2aad9d-7524-4078-aefa-bea3cac3a93c) 
 
 
