@@ -144,7 +144,6 @@ Finally, this releases the resources (webcam and video file) and closes all Open
 
 
 
-
  
     
 
