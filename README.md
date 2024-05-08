@@ -1,20 +1,20 @@
 ## histogrm
-1.Title and Description
+1.Title: and Description
 Title: Visualizing Color Histogram of an Image
 Description: This Python script reads an image, calculates its color histogram, and visualizes the histogram using matplotlib.
 
-2.Installation
+2.Installation:
 pip install numpy opencv-python matplotlib
 
-3.Libraries
+3.Libraries:
 `numpy` as `np`: For numerical computing.
 `cv2` as `cv`: OpenCV library for image processing.
 `pyplot` module from `matplotlib`library for plotting graphs.
 
-4.Usage
+4.Usage:
 A histogram allows you to see the frequency distribution of a data set. It offers an “at a glance” picture of a distribution pattern, charted in specific categories.
 
-5.Example
+5.Example:
 import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
