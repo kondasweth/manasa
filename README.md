@@ -55,7 +55,7 @@ ouput
 ![Figure_1](https://github.com/kondasweth/manasa/assets/169050846/da2aad9d-7524-4078-aefa-bea3cac3a93c) 
 
 
-## web
+## webcam
 1.Title and Description
 Title: Webcam Video Recorder
 Description: This Python script captures video from the webcam, converts the frames to RGB format, and saves them to a video file using OpenCV.
@@ -230,6 +230,55 @@ input
 output
 ![0_7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/kondasweth/manasa/assets/169050846/00132406-52b4-4751-a998-1e0c235c3799)
 ![full_7622202030987_f306535d741c9148dc458acbbc887243_L_487](https://github.com/kondasweth/manasa/assets/169050846/4ad3d256-7ff4-49a8-86f0-728670a0fe77)
+
+## number
+1.Title:iteration (this will be explain each iteration,print the sum of the current and previous numbers)
+
+2.Example
+def print_sum_of_current_and_previous():
+    previous_number = 0
+    for i in range(1, 11):
+        current_number = i
+        sum_of_previous_and_current = previous_number + current_number
+        print(f"Current number: {current_number}, Previous number: {previous_number}, Sum: {sum_of_previous_and_current}")
+        previous_number = current_number
+
+print_sum_of_current_and_previous()
+
+3.Explaination
+Function Definition:
+def print_sum_of_current_and_previous():
+This line defines a function named `print_sum_of_current_and_previous()`. It doesn't take any arguments.
+Initialization:
+previous_number = 0
+It initializes a variable `previous_number` to 0. This variable will store the previous number in each iteration.
+Loop:
+for i in range(1, 11):
+It assigns the current value of the loop variable `i` to `current_number`.
+sum_of_previous_and_current = previous_number + current_number
+It calculates the sum of the previous number and the current number and stores it in
+`sum_of_previous_and_current`
+print(f"Current number: {current_number}, Previous number: {previous_number}, Sum: {sum_of_previous_and_current}")
+It prints the current number, the previous number, and their sum.
+previous_number = current_number
+It updates `previous_number` to the current number for the next iteration.
+Function Call:
+print_sum_of_current_and_previous()
+It calls the function print_sum_of_current_and_previous().
+The output of running this code will be a series of lines printed to the console, each displaying the current number, the previous number, and their sum, for the numbers 1 to 10. In each line, the current number will be the value of i, the previous number will be the value of i - 1, and the sum will be the value of i + (i - 1).
+
+Output:
+Current Number 0Previous Number 0is 0
+Current Number 1Previous Number 0is 1
+Current Number 2Previous Number 1is 3
+Current Number 3Previous Number 2is 5
+Current Number 4Previous Number 3is 7
+Current Number 5Previous Number 4is 9
+Current Number 6Previous Number 5is 11
+Current Number 7Previous Number 6is 13
+Current Number 8Previous Number 7is 15
+Current Number 9Previous Number 8is 17
+
 
 
 
