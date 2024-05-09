@@ -70,7 +70,7 @@ OpenCV(`cv2`):
 4.Usage
 A webcam is a digital camera that captures video and audio data and transmits it in real-time over the internet. It is commonly used for video conferencing, live streaming, online meetings, and recording videos.
 
-5.Example
+5.Example:
 import cv2 
 
 video = cv2.VideoCapture(0) 
