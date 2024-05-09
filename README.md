@@ -71,76 +71,77 @@ OpenCV(`cv2`):
 A webcam is a digital camera that captures video and audio data and transmits it in real-time over the internet. It is commonly used for video conferencing, live streaming, online meetings, and recording videos.
 
 5.Example
-import cv2 as cv
-cam = cv.VideoCapture(0)
-cc = cv.VideoWriter_fourcc(*'XVID')
-file = cv.VideoWriter('output.avi', cc, 15.0, (640, 480))
-if not cam.isOpened():
-   print("error opening camera")
-   exit()
-while True:
-   # Capture frame-by-frame
-   ret, frame = cam.read()
-   # if frame is read correctly ret is True
-   if not ret:
-      print("error in retrieving frame")
-      break
-   img = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
-   cv.imshow('frame', img)
-   file.write(img)
-
+import cv2 
+  
    
-   if cv.waitKey(1) == ord('q'):
-      break
-
-cam.release()
-file.release()
-cv.destroyAllWindows()
+# Create an object to read  
+# from camera 
+video = cv2.VideoCapture(0) 
+   
+# We need to check if camera 
+# is opened previously or not 
+if (video.isOpened() == False):  
+    print("Error reading video file") 
+  
+# We need to set resolutions. 
+# so, convert them from float to integer. 
+frame_width = int(video.get(3)) 
+frame_height = int(video.get(4)) 
+   
+size = (frame_width, frame_height) 
+   
+# Below VideoWriter object will create 
+# a frame of above defined The output  
+# is stored in 'filename.avi' file. 
+result = cv2.VideoWriter('camera.avi',  
+                         cv2.VideoWriter_fourcc(*'MJPG'), 
+                         10, size) 
+    
+while(True): 
+    ret, frame = video.read() 
+  
+    if ret == True:  
+  
+        # Write the frame into the 
+        # file 'filename.avi' 
+        result.write(frame) 
+        cv2.imshow('Frame', frame) 
+  
+        # Press S on keyboard  
+        # to stop the process 
+        if cv2.waitKey(1) & 0xFF == ord('s'): 
+            break
+  
+    # Break the loop 
+    else: 
+        break
+  
+# When everything done, release  
+# the video capture and video  
+# write objects 
+video.release() 
+result.release() 
+    
+# Closes all the frames 
+cv2.destroyAllWindows() 
+   
+print("The video was successfully saved")
 
 6.Explaination
-Opening the Webca
-cam = cv.VideoCapture(0)
-This line initializes a capture object to access the webcam.
-`0` represents the index of the webcam (usually the default webcam).
-Creating a VideoWriter Object
-cc = cv.VideoWriter_fourcc(*'XVID')
-file = cv.VideoWriter('output.avi', cc, 15.0, (640, 480))
-This part initializes a VideoWriter object to write the captured frames to a video file.
-VideoWriter_fourcc() specifies the codec for writing the video (in this case, XVID).
-'output.avi' is the name of the output video file.
- 15.0 is the frames per second (FPS) of the output video.
- (640, 480) is the resolution of the video (width, height).
-Checking Camera Availability
-if not cam.isOpened():
-   print("error opening camera")
-   exit()
- while True:
-   ret, frame = cam.read()
-   if not ret:
-      print("error in retrieving frame")
-      break
-This checks if the webcam is successfully opened. If not, it prints an error message and exits the program.
-Converting Color Format
-img = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
-This line converts the color format of the captured frame from BGR to RGB.
-Displaying Frames
-cv.imshow('frame', img)
-This line displays the captured frame using OpenCV's `imshow()` function.
-Writing Frames to Video File
-file.write(img)
-This writes the converted frame to the output video file using the VideoWriter object.
-Exiting the Program    
-if cv.waitKey(1) == ord('q'):
-   break
-This checks for the 'q' keypress. If 'q' is pressed, it breaks out of the loop.
-Releasing Resources
-cam.release()
-file.release()
-cv.destroyAllWindows()
-Finally, this releases the resources (webcam and video file) and closes all OpenCV windows.
+Importing Libraries: The code begins by importing the OpenCV library with the alias `cv2`.
+
+Opening the Camera: It creates a video capture object video using `cv2`.`VideoCapture(0)`, which opens the default camera (usually the webcam).
+
+Checking Camera Status: It checks if the camera is opened successfully using `video.isOpened()`. If the camera fails to open, it prints an error message.
+Creating VideoWriter Object: It creates a VideoWriter object named result to save the video to a file named "camera.avi". It specifies the codec (MJPG), frames per second (fps), and size of the video frames.
+Capturing and Saving Video: Inside a `while loop`, it continuously captures frames from the camera using `video.read()`. If a frame is read successfully `(ret == True)`, it writes the frame to the video file using `result.write(frame)` and displays it using `cv2.imshow()`. Pressing 'S' on the keyboard stops the process (`cv2.waitKey(1) & 0xFF == ord('s'))`.
+Releasing Resources: After exiting the loop, it releases the video capture and video write objects using `video.release()` and `result.release()` respectively.
+Closing Windows: It closes all the OpenCV windows using `cv2.destroyAllWindows()`.
+Print Success Message: Finally, it prints a success message indicating that the video was saved successfully.
 
 7.output
 https://github.com/kondasweth/manasa/assets/169050846/6b871eb9-12a4-4e3a-b35f-9d330e61d448
+
 ## Bounding boxes
 1.Title:Draw bounding boxes for images.
 
