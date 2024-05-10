@@ -16,7 +16,6 @@ pip install numpy opencv-python matplotlib
 A histogram allows you to see the frequency distribution of a data set. It offers an “at a glance” picture of a distribution pattern, charted in specific categories.
 
 5.Example:
-=======
 ##histogram
 
 1.install following packages
