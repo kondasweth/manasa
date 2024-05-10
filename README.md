@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## histogrm
 1.Title: and Description
 Title: Visualizing Color Histogram of an Image
@@ -15,6 +16,17 @@ pip install numpy opencv-python matplotlib
 A histogram allows you to see the frequency distribution of a data set. It offers an “at a glance” picture of a distribution pattern, charted in specific categories.
 
 5.Example:
+=======
+##histogram
+
+1.install following packages
+```numpy, opencv, matplootlib```
+
+2.code
+```bash
+
+
+>>>>>>> aaa4cfb... add new file
 import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
@@ -28,6 +40,7 @@ for i,col in enumerate(color):
  plt.plot(histr,color = col)
  plt.xlim([0,256])
 plt.show()
+<<<<<<< HEAD
 
 6.Explaination
 Imports:
@@ -294,3 +307,6 @@ Current Number 9Previous Number 8is 17
 
 
 
+=======
+```
+>>>>>>> aaa4cfb... add new file
