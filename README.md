@@ -1,4 +1,5 @@
 ## histogrm
+
 1.Title: and Description
 Title: Visualizing Color Histogram of an Image
 Description: This Python script reads an image, calculates its color histogram, and visualizes the histogram using matplotlib.
