@@ -129,7 +129,7 @@ https://github.com/kondasweth/manasa/assets/169050846/6b871eb9-12a4-4e3a-b35f-9d
 ## Bounding boxes
 1.Title:Draw bounding boxes for images.
 
-2.Installation
+2.Installation 
 pip install pillow
 
 3.Libraries
