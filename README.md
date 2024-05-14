@@ -244,7 +244,7 @@ It calculates the sum of the previous number and the current number and stores i
 `sum_of_previous_and_current`
 print(f"Current number: {current_number}, Previous number: {previous_number}, Sum: {sum_of_previous_and_current}")
 It prints the current number, the previous number, and their sum.
-previous_number = current_number
+previous_number = current_number 
 It updates `previous_number` to the current number for the next iteration.
 Function Call:
 print_sum_of_current_and_previous()
