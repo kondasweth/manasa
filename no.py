@@ -1,9 +1,13 @@
-def print_sum_of_current_and_previous():
-    previous_number = 0
-    for i in range(1, 11):
-        current_number = i
-        sum_of_previous_and_current = previous_number + current_number
-        print(f"Current number: {current_number}, Previous number: {previous_number}, Sum: {sum_of_previous_and_current}")
-        previous_number = current_number
+import argparse
+parser = argparse.ArgumentParser(description='process some integers')
 
-print_sum_of_current_and_previous()
+parser.add_argument('current_number', type=int)
+parser.add_argument('previous_number', type=int)
+args = parser.parse_args()
+current_num = args.current_number
+previous_num = args.previous_number
+
+for i in range(10):
+    sum = previous_num + i
+    print(f'Current number {i} Previous Number {previous_num} is {sum}')
+    previous_num = i
